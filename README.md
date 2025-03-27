@@ -1,48 +1,28 @@
-# Astro Starter Kit: Basics
+##Descripción
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este sistema permite evaluar el nivel de madurez en Business Intelligence (BI) de una empresa mediante un conjunto de preguntas. Con base en las respuestas, el sistema determina el nivel de madurez en BI según el Modelo de Madurez de Gartner y proporciona recomendaciones para mejorar.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+##Características
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Determina el nivel de madurez en BI con base en una serie de preguntas.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Asigna un puntaje y clasifica a la empresa en uno de los cinco niveles de madurez:
 
-## 🚀 Project Structure
+Inconsciente (Unaware)
 
-Inside of your Astro project, you'll see the following folders and files:
+Oportunista (Opportunistic)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Estándar (Standards)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Empresarial (Enterprise)
 
-## 🧞 Commands
+Transformador (Transformative)
 
-All commands are run from the root of the project, from a terminal:
+Proporciona descripciones detalladas de cada nivel y recomendaciones para la mejora.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Genera un plan de implementación de BI según el nivel identificado.
 
-## 👀 Want to learn more?
+###Tecnologías utilizadas
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Frontend: Astro con TailwindCSS
+Funcionalidad: JS
