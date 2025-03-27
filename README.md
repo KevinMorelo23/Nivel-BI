@@ -1,28 +1,28 @@
-##Descripción
+## Descripción
 
 Este sistema permite evaluar el nivel de madurez en Business Intelligence (BI) de una empresa mediante un conjunto de preguntas. Con base en las respuestas, el sistema determina el nivel de madurez en BI según el Modelo de Madurez de Gartner y proporciona recomendaciones para mejorar.
 
-##Características
+## Características
 
 Determina el nivel de madurez en BI con base en una serie de preguntas.
 
 Asigna un puntaje y clasifica a la empresa en uno de los cinco niveles de madurez:
 
-Inconsciente (Unaware)
+> Inconsciente (Unaware)
 
-Oportunista (Opportunistic)
+> Oportunista (Opportunistic)
 
-Estándar (Standards)
+> Estándar (Standards)
 
-Empresarial (Enterprise)
+> Empresarial (Enterprise)
 
-Transformador (Transformative)
+> Transformador (Transformative)
 
 Proporciona descripciones detalladas de cada nivel y recomendaciones para la mejora.
 
 Genera un plan de implementación de BI según el nivel identificado.
 
-###Tecnologías utilizadas
+## Tecnologías utilizadas
 
 Frontend: Astro con TailwindCSS
 Funcionalidad: JS
