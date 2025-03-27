@@ -1,0 +1,250 @@
+---
+interface MaturityLevel {
+    name: string;
+    range: [number, number];
+    description: string;
+}
+
+const maturityLevels: MaturityLevel[] = [
+    {
+        name: "Nivel 1: Inconsciente (Unaware)",
+        range: [5, 9],
+        description:
+            "La empresa no tiene procesos formales de Business Intelligence (BI) y las decisiones se basan en la intuición y la experiencia personal. No hay herramientas de BI implementadas ni una cultura de datos establecida, lo que dificulta la toma de decisiones estratégicas. Para avanzar, se recomienda iniciar con la recopilación estructurada de datos en hojas de cálculo o bases de datos básicas y fomentar la concienciación sobre la importancia del análisis de datos en la toma de decisiones.",
+    },
+    {
+        name: "Nivel 2: Oportunista (Opportunistic)",
+        range: [10, 14],
+        description:
+            "Existen algunas iniciativas aisladas de BI en ciertas áreas, pero no hay un enfoque estandarizado ni integración entre departamentos. Algunas áreas del negocio generan reportes básicos, pero sin un análisis profundo ni automatización. La dependencia de herramientas manuales y la falta de acceso centralizado a los datos limitan la capacidad de tomar decisiones basadas en información confiable. Para mejorar, se recomienda implementar herramientas básicas de BI, como dashboards simples, y establecer procesos iniciales para la recopilación y análisis de datos.",
+    },
+    {
+        name: "Nivel 3: Estándar (Standards)",
+        range: [15, 19],
+        description:
+            "La empresa comienza a desarrollar un enfoque coordinado en el uso de BI. Se establecen métricas y herramientas compartidas, aunque aún existen limitaciones en la integración total de los datos. Las decisiones comienzan a basarse en información más estructurada, pero pueden existir problemas de calidad de datos y acceso en tiempo real. Para avanzar, se recomienda fortalecer la gobernanza de datos, mejorar la integración entre sistemas y capacitar a los empleados en el uso de herramientas de BI más avanzadas.",
+    },
+    {
+        name: "Nivel 4: Empresarial (Enterprise)",
+        range: [20, 22],
+        description:
+            "La empresa utiliza BI en todas sus áreas con un enfoque estructurado y alineado a sus objetivos estratégicos. Se toman decisiones basadas en datos y la infraestructura de BI está bien definida, con acceso centralizado y reportes automatizados. Sin embargo, aún puede haber oportunidades de mejora en términos de análisis predictivo y optimización de procesos. Para seguir evolucionando, se recomienda explorar tecnologías avanzadas como Machine Learning e inteligencia artificial para mejorar la toma de decisiones.",
+    },
+    {
+        name: "Nivel 5: Transformador (Transformative)",
+        range: [23, 25],
+        description:
+            "BI es un pilar estratégico de la empresa, integrándose en todos los procesos operativos y de toma de decisiones. Se utilizan herramientas avanzadas como inteligencia artificial y Machine Learning para realizar análisis predictivos y optimizar operaciones en tiempo real. La cultura organizacional está centrada en el uso de datos y se fomenta la innovación basada en analítica avanzada. Para mantener este nivel, se recomienda continuar la inversión en nuevas tecnologías, asegurar la calidad y seguridad de los datos y fomentar una cultura de mejora continua en BI.",
+    },
+];
+---
+
+<div class="">
+    <hr class="border-b-1 border-gray-300" />
+    <div class="">
+        <div class="p-6">
+            <form id="bi-maturity-form" class="space-y-6">
+                <div class="mb-4">
+                    <label
+                        for="companyName"
+                        class="block text-lg font-bold mb-2"
+                    >
+                        Nombre de la Empresa
+                    </label>
+                    <input
+                        type="text"
+                        id="companyName"
+                        name="companyName"
+                        class="w-full p-2 border borde-1 shadow-md rounded-md"
+                        placeholder="Ingrese el nombre de la empresa"
+                    />
+                </div>
+
+                {
+                    [1, 2, 3, 4, 5].map((num) => (
+                        <div class="mb-4">
+                            <h3 class="font-bold text-lg mb-2">
+                                {num === 1 &&
+                                    "1. Uso de datos en la toma de decisiones"}
+                                {num === 2 &&
+                                    "2. Infraestructura y herramientas de BI"}
+                                {num === 3 &&
+                                    "3. Coordinación entre áreas para el uso de BI"}
+                                {num === 4 &&
+                                    "4. Cultura organizacional orientada a datos"}
+                                {num === 5 && "5. Impacto de BI en la empresa"}
+                            </h3>
+                            {[1, 2, 3, 4, 5].map((option) => (
+                                <div class="mb-2">
+                                    <label class="inline-flex items-center cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name={`q${num}`}
+                                            value={option}
+                                            class="mr-2"
+                                        />
+                                        {num === 1 &&
+                                            option === 1 &&
+                                            "No se utilizan datos para la toma de decisiones; se basa en la intuición y experiencia."}
+                                        {num === 1 &&
+                                            option === 2 &&
+                                            "Se generan reportes básicos, pero sin un análisis profundo."}
+                                        {num === 1 &&
+                                            option === 3 &&
+                                            "Se emplean herramientas de BI para generar informes y dashboards."}
+                                        {num === 1 &&
+                                            option === 4 &&
+                                            "Se analizan los datos de manera integral en toda la empresa."}
+                                        {num === 1 &&
+                                            option === 5 &&
+                                            "Se utilizan modelos avanzados de análisis predictivo y prescriptivo."}
+
+                                        {num === 2 &&
+                                            option === 1 &&
+                                            "No existen herramientas de BI implementadas en la organización."}
+                                        {num === 2 &&
+                                            option === 2 &&
+                                            "Se utilizan herramientas básicas de reportes en algunas áreas."}
+                                        {num === 2 &&
+                                            option === 3 &&
+                                            "Se cuenta con un Data Warehouse y herramientas de BI en múltiples departamentos."}
+                                        {num === 2 &&
+                                            option === 4 &&
+                                            "La empresa tiene un ecosistema BI centralizado y estandarizado."}
+                                        {num === 2 &&
+                                            option === 5 &&
+                                            "La organización emplea soluciones avanzadas con IA y Machine Learning."}
+
+                                        {num === 3 &&
+                                            option === 1 &&
+                                            "Cada departamento maneja sus datos sin coordinación."}
+                                        {num === 3 &&
+                                            option === 2 &&
+                                            "Algunos departamentos comparten datos, pero sin estandarización."}
+                                        {num === 3 &&
+                                            option === 3 &&
+                                            "Existen normas y procesos para compartir datos de manera estructurada."}
+                                        {num === 3 &&
+                                            option === 4 &&
+                                            "La empresa tiene un centro de competencia BI con equipos dedicados."}
+                                        {num === 3 &&
+                                            option === 5 &&
+                                            "La organización gestiona los datos de manera integral a nivel corporativo."}
+
+                                        {num === 4 &&
+                                            option === 1 &&
+                                            "No se fomenta el uso de datos para la toma de decisiones."}
+                                        {num === 4 &&
+                                            option === 2 &&
+                                            "Algunos líderes impulsan el uso de datos en sus equipos."}
+                                        {num === 4 &&
+                                            option === 3 &&
+                                            "Se promueve la formación en análisis de datos y BI dentro de la organización."}
+                                        {num === 4 &&
+                                            option === 4 &&
+                                            "Se han establecido procesos formales para la gestión de datos."}
+                                        {num === 4 &&
+                                            option === 5 &&
+                                            "La empresa tiene una cultura 100% orientada a datos y BI."}
+
+                                        {num === 5 &&
+                                            option === 1 &&
+                                            "No hay impacto significativo, ya que el BI no está implementado."}
+                                        {num === 5 &&
+                                            option === 2 &&
+                                            "Se utiliza BI en algunas áreas, pero con poca influencia en la estrategia."}
+                                        {num === 5 &&
+                                            option === 3 &&
+                                            "BI es clave en la operación diaria de la empresa."}
+                                        {num === 5 &&
+                                            option === 4 &&
+                                            "La organización toma decisiones estratégicas basadas en BI."}
+                                        {num === 5 &&
+                                            option === 5 &&
+                                            "BI es un pilar fundamental en la innovación y el crecimiento del negocio."}
+                                    </label>
+                                </div>
+                            ))}
+                        </div>
+                    ))
+                }
+
+                <button
+                    type="button"
+                    id="calculateBtn"
+                    class="border border-1 font-bold p-2 shadow-md rounded-md w-full mt-4"
+                >
+                    Calcular Nivel de Madurez
+                </button>
+
+                <div
+                    id="resultContainer"
+                    class="hidden mt-4 p-4 border borde-1 shadow-md rounded-md"
+                >
+                    <h3 class="text-xl font-bold mb-2" id="companyNameResult">
+                    </h3>
+                    <p class="mb-2">
+                        <strong>🏆 Puntaje Total:</strong>
+                        <span id="totalScoreResult"></span>
+                    </p>
+                    <p class="mb-2">
+                        <strong>📈 Nivel de Madurez:</strong>
+                        <span id="maturityLevelResult"></span>
+                    </p>
+                    <p>
+                        <strong>🔎 Descripción:</strong>
+                        <span id="maturityDescriptionResult"></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script is:inline define:vars={{ maturityLevels }}>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("bi-maturity-form");
+        const calculateBtn = document.getElementById("calculateBtn");
+        const resultContainer = document.getElementById("resultContainer");
+        const companyNameResult = document.getElementById("companyNameResult");
+        const totalScoreResult = document.getElementById("totalScoreResult");
+        const maturityLevelResult = document.getElementById(
+            "maturityLevelResult",
+        );
+        const maturityDescriptionResult = document.getElementById(
+            "maturityDescriptionResult",
+        );
+
+        calculateBtn.addEventListener("click", () => {
+            const companyName =
+                document.getElementById("companyName").value ||
+                "Empresa Sin Nombre";
+            let totalScore = 0;
+
+            // Calculate total score
+            for (let i = 1; i <= 5; i++) {
+                const selectedOption = document.querySelector(
+                    `input[name="q${i}"]:checked`,
+                );
+                if (selectedOption) {
+                    totalScore += parseInt(selectedOption.value);
+                } else {
+                    alert("Por favor, responda todas las preguntas");
+                    return;
+                }
+            }
+
+            const matchedLevel = maturityLevels.find(
+                (level) =>
+                    totalScore >= level.range[0] &&
+                    totalScore <= level.range[1],
+            );
+
+            companyNameResult.textContent = companyName;
+            totalScoreResult.textContent = totalScore;
+            maturityLevelResult.textContent = matchedLevel.name;
+            maturityDescriptionResult.textContent = matchedLevel.description;
+            resultContainer.classList.remove("hidden");
+        });
+    });
+</script>
